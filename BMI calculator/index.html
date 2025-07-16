@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BMI Gauge Chart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="gauge-container">
+    <svg viewBox="0 0 300 150" class="gauge-arc">
+      <!-- Segments -->
+      <path d="M10,150 A140,140 0 0,1 70,17" stroke="red" stroke-width="20" fill="none" />
+      <path d="M70,17 A140,140 0 0,1 110,5" stroke="yellow" stroke-width="20" fill="none" />
+      <path d="M110,5 A140,140 0 0,1 190,5" stroke="green" stroke-width="20" fill="none" />
+      <path d="M190,5 A140,140 0 0,1 230,17" stroke="yellow" stroke-width="20" fill="none" />
+      <path d="M230,17 A140,140 0 0,1 290,150" stroke="red" stroke-width="20" fill="none" />
+
+      <!-- Tick Marks -->
+      <g id="tick-group"></g>
+
+      <!-- Labels -->
+      <text x="30" y="100" font-size="10" transform="rotate(-45, 30, 100)">Underweight</text>
+      <text x="90" y="30" font-size="10" transform="rotate(-15, 90, 30)">Normal</text>
+      <text x="200" y="30" font-size="10" transform="rotate(15, 200, 30)">Overweight</text>
+      <text x="250" y="100" font-size="10" transform="rotate(45, 250, 100)">Obesity</text>
+
+      <!-- Pointer -->
+      <line id="pointer" x1="150" y1="150" x2="150" y2="30" stroke="black" stroke-width="3" transform="rotate(0,150,150)"/>
+    </svg>
+  </div>
+
+  <div class="info">
+    <div class="bmi-value" id="bmiResult">BMI = -- kg/m² (--)</div>
+    <div id="extraInfo">
+      <p>Healthy BMI Range: 18.5 - 24.9</p>
+      <p>Healthy Weight Range: --</p>
+      <p>BMI Prime: --</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

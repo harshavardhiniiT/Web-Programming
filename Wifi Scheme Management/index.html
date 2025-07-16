@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WiFi Scheme Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <h3>WiFi Scheme Management</h3>
+
+    <div id="error-message"></div>
+
+    <form id="wifiForm">
+      <label for="schemeName">Scheme Name:</label>
+      <input type="text" id="schemeName" name="schemeName" placeholder="Enter Scheme Name">
+
+      <label for="connectionType">Connection Type:</label>
+      <input type="text" id="connectionType" name="connectionType" placeholder="Enter Connection Type">
+
+      <label for="speed">Speed (Mbps):</label>
+      <input type="text" id="speed" name="speed" placeholder="Enter Speed in Mbps">
+
+      <label for="dataLimit">Data Limit (GB):</label>
+      <input type="text" id="dataLimit" name="dataLimit" placeholder="Enter Data Limit in GB">
+
+      <label for="price">Price (₹):</label>
+      <input type="text" id="price" name="price" placeholder="Enter Price in ₹">
+
+      <button type="button" id="addschemebtn">Submit Scheme</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
